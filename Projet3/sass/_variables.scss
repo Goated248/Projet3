@@ -1,2 +1,8 @@
 $bg-color: #f6f6f6;
 $main-purple: #9356DC;
+$main-pink:#FF79DA;
+$main-green:#99e2d0;
+$second-green:#008766;
+
+$lightenpurple: lighten($main-purple,10%);
+$lightenpink: lighten($main-pink,10%);
