@@ -2,24 +2,24 @@
   font-family: "Roboto", sans-serif;
 }
 
-header {
+.header {
   display: flex;
   flex-direction: column;
 }
-header .logo {
+.header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
 }
-header .localisation {
+.header__localisation {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: #EAEAEA;
   box-shadow: 0px 9px 15px #c6c6c6;
 }
-header .localisation i {
+.header__localisation i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,6 +85,14 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .btn__container {
+    flex-direction: row;
+    gap: 25px;
+    box-sizing: border-box;
+  }
 }
 
 .fonctionnement {
@@ -134,14 +142,31 @@ a {
 .restaurants {
   background-color: #f6f6f6;
   padding: 10px;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 10px;
+}
+@media (min-width: 992px) {
+  .restaurants {
+    padding: 0 180px;
+  }
 }
 .restaurants__card {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+@media (min-width: 992px) {
+  .restaurants__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .restaurants__card a {
+    display: contents;
+  }
 }
 
 .card {
@@ -218,8 +243,21 @@ footer {
   background-color: black;
   margin-top: 20px;
 }
+@media (min-width: 992px) {
+  footer {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}
 footer .logo__footer {
   padding-left: 15px;
+}
+@media (min-width: 992px) {
+  footer .logo__footer {
+    padding: 5px;
+  }
 }
 footer ul {
   list-style-type: none;
@@ -229,4 +267,12 @@ footer ul {
   gap: 7px;
   padding: 15px;
   margin: 0;
+}
+@media (min-width: 992px) {
+  footer ul {
+    flex-direction: row;
+  }
+}
+footer ul i {
+  padding-right: 10px;
 }/*# sourceMappingURL=style.css.map */

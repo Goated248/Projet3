@@ -28,7 +28,7 @@ header .logo img {
 header .arrow {
   position: absolute;
   left: 5%;
-  top: 2%;
+  top: 1.5%;
 }
 
 .image__resto {
@@ -122,7 +122,7 @@ header .arrow {
   justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 16px #c6c6c6;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -210,8 +210,21 @@ footer {
   background-color: black;
   margin-top: 20px;
 }
+@media (min-width: 992px) {
+  footer {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}
 footer .logo__footer {
   padding-left: 15px;
+}
+@media (min-width: 992px) {
+  footer .logo__footer {
+    padding: 5px;
+  }
 }
 footer ul {
   list-style-type: none;
@@ -221,4 +234,12 @@ footer ul {
   gap: 7px;
   padding: 15px;
   margin: 0;
+}
+@media (min-width: 992px) {
+  footer ul {
+    flex-direction: row;
+  }
+}
+footer ul i {
+  padding-right: 10px;
 }/*# sourceMappingURL=styleresto.css.map */
