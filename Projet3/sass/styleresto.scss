@@ -4,6 +4,7 @@
 
 @import "_variables.scss";
 @import "_mixins.scss";
+@import "_keyframes";
 
 :root {
     --h1-font-weight: 400;
@@ -75,6 +76,9 @@ header {
     border-top-right-radius: 25px;
     width: 100%;
     max-width: 1055px;
+    margin-top: -45px;
+    z-index: 1;
+    position: relative;
    @include flexbox (column, center,center);
 }
 
@@ -84,6 +88,21 @@ header {
     gap: 15px;
     width: 85%;
     margin-top: 45px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: loadresto 500ms ease-in-out both;
+
+    &.entree__section {
+        animation-delay: 300ms;
+    }
+
+    &.plat__section {
+        animation-delay: 600ms;
+    }
+    
+    &.dessert__section{
+        animation-delay:900ms;
+    }
 }
 
 .nom__resto {

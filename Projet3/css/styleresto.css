@@ -2,6 +2,34 @@
   font-family: "Roboto", sans-serif;
 }
 
+@keyframes loadresto {
+  0% {
+    transform: translate(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes rotateload {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 :root {
   --h1-font-weight: 400;
   --h3-font-weight: 500;
@@ -72,6 +100,9 @@ header .arrow {
   border-top-right-radius: 25px;
   width: 100%;
   max-width: 1055px;
+  margin-top: -45px;
+  z-index: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,6 +115,18 @@ header .arrow {
   gap: 15px;
   width: 85%;
   margin-top: 45px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: loadresto 500ms ease-in-out both;
+}
+.menu__section.entree__section {
+  animation-delay: 300ms;
+}
+.menu__section.plat__section {
+  animation-delay: 600ms;
+}
+.menu__section.dessert__section {
+  animation-delay: 900ms;
 }
 
 .nom__resto {

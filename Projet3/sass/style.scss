@@ -4,7 +4,49 @@
 
 @import "_mixins.scss";
 @import "_variables.scss";
+@import "_keyframes.scss";
 
+.loader {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 1;
+    animation: fadeout 300ms ease-out 1500ms forwards;
+
+    &__one,
+    &__two,
+    &__three {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        border-radius: 50%;
+        border: dashed 10px;
+    }
+    &__one {
+        @include circle-dimension(200px, 200px);
+        border-color:$main-purple;
+        animation: rotateload $loader-duration linear;
+    }
+    &__two{
+        @include circle-dimension(150px, 150px);
+        border-color: $main-green;
+        animation: rotateload $loader-duration linear;
+    }
+    &__three{
+        @include circle-dimension (100px, 100px);
+        border-color: $main-pink;
+        animation: rotateload $loader-duration linear;
+    }
+
+}
 
 .header {
     display: flex;
@@ -179,7 +221,7 @@ a {
 
 .restaurants {
     background-color: $bg-color ;
-    padding: 10px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -288,7 +330,6 @@ a {
 
 footer {
     background-color: black;
-    margin-top: 20px;
 
     @media (min-width:992px) {
         height: 114px;
