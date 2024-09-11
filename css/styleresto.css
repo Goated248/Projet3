@@ -146,7 +146,7 @@ header .arrow {
   content: "\f004";
   font-weight: 700;
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 10px;
   color: transparent;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -235,7 +235,6 @@ header .arrow {
   transform: translateX(100%);
   opacity: 0;
   transition: transform 500ms ease-in-out, opacity 500ms ease;
-  z-index: 0;
 }
 .menu__checkbox i {
   color: white;
